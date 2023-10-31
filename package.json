@@ -1,0 +1,31 @@
+{
+  "name": "vote-ab-server",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A/B pool server",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "NODE_ENV=test && node ./node_modules/jasmine/bin/jasmine.js",
+    "coverage": "NODE_ENV=test && /usr/local/bin/istanbul cover -x '**/spec/**' ./node_modules/jasmine/bin/jasmine.js ",
+    "bump": "./node_modules/version-bump-prompt/bin/bump.js --all --grep Dockerfile README.md server/lib/docker-manager/package.json"
+  },
+  "author": "joan@wetopi.com",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/good": "^9.0.1",
+    "@hapi/good-console": "^9.0.1",
+    "@hapi/good-squeeze": "^6.0.0",
+    "@hapi/hapi": "^21.3.2",
+    "config": "^3.3.9",
+    "joi": "^17.11.0",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sitamet/vote-ab-server.git"
+  }
+}
