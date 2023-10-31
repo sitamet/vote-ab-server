@@ -13,7 +13,7 @@ module.exports = {
 
         'api': {
             host: '0.0.0.0',
-            port: 8090,
+            port: process.env.PORT || 8090,
 
             routes: {
                 'cors': {
